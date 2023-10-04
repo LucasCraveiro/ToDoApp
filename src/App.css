@@ -1,0 +1,122 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.Addform {
+  margin-bottom: 40px;
+}
+
+.add {
+  border: 1px solid rgb(36, 36, 139);
+  border-radius: 10px;
+  color: white;
+  background-color: rgb(36, 36, 139);
+  font-weight: 600;
+  margin-left: 20px;
+  min-width: 100px;
+  transition: all ease-in-out 0.2s;
+}
+
+.add:is(:hover) {
+  border: 1px solid rgb(36, 36, 139);
+  color: black;
+  background-color: white;
+  font-weight: 600;
+}
+
+.cancel {
+  border: 1px solid rgb(196, 48, 70);
+  border-radius: 10px;
+  color: white;
+  background-color: rgb(196, 48, 70);
+  font-weight: 600;
+  margin-left: 20px;
+  min-width: 100px;
+  transition: all ease-in-out 0.2s;
+  margin-left: 20px;
+}
+
+.cancel:is(:hover) {
+  border: 1px solid rgb(196, 48, 70);
+  color: black;
+  background-color: white;
+  font-weight: 600;
+}
+
+.inputAdd {
+  height: 40px;
+  border: 2px solid rgb(101, 101, 101);
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  padding: 2em;
+  border: 1px solid black;
+  border-radius: 10px;
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 5px lightgray;
+}
+
+.card:is(:hover) {
+  border: 1px solid blue;
+  transition: all ease-in-out 0.2s;
+  transform: scale(1.1);
+}
+
+.text {
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 10px 0px;
+  background-color: rgba(211, 211, 211, 0.371);
+}
+
+.button_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.delete {
+  border: 1px solid rgb(175, 103, 103);
+  border-radius: 10px;
+  color: white;
+  background-color: rgb(175, 103, 103);
+  font-weight: 600;
+  transition: all ease-in-out 0.2s;
+}
+
+.delete:is(:hover) {
+  border: 1px solid rgb(175, 103, 103);
+  color: red;
+  background-color: white;
+  font-weight: 600;
+}
+
+.edit {
+  border: 1px solid rgb(114, 184, 158);
+  border-radius: 10px;
+  color: white;
+  background-color: rgb(114, 184, 158);
+  font-weight: 600;
+  transition: all ease-in-out 0.2s;
+}
+
+.edit:is(:hover) {
+  border: 1px solid rgb(114, 184, 158);
+  color: black;
+  background-color: white;
+  font-weight: 600;
+}
