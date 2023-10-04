@@ -1,8 +1,9 @@
 import { useState } from "react";
-
+import FormTodo from "./components/FormToDo";
+import ListItem from "./components/ListItem";
 import "./App.css";
 
-type Todo = {
+export type Todo = {
   id: string;
   text: string;
 };
@@ -50,36 +51,21 @@ function App() {
   return (
     <>
       <h1>ToDo List</h1>
-      <form className="Addform" onSubmit={update ? updateState : AddTodo}>
-        <input
-          type="text"
-          className="inputAdd"
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-        />
-        <button className="add">{update ? "Update" : "Add"}</button>
-        {update && (
-          <button className="cancel" onClick={() => cancelUpdate()}>
-            Cancel
-          </button>
-        )}
-      </form>
+      <FormTodo
+        AddTodo={(e) => AddTodo(e)}
+        updateState={(e) => updateState(e)}
+        value={value}
+        setValue={setValue}
+        update={update}
+        cancelUpdate={cancelUpdate}
+      />
       <div className="list">
         {list?.map((item) => (
-          <div className="card" key={item.id}>
-            <h3 className="text">{item.text}</h3>
-            <div className="button_wrapper">
-              <button className="delete" onClick={() => deleteItem(item.id)}>
-                Delete
-              </button>
-              <button
-                className="edit"
-                onClick={() => updateItem(item.id, item.text)}
-              >
-                Edit
-              </button>
-            </div>
-          </div>
+          <ListItem
+            deleteItem={() => deleteItem(item.id)}
+            item={item}
+            updateItem={() => updateItem(item.id, item.text)}
+          />
         ))}
       </div>
     </>
